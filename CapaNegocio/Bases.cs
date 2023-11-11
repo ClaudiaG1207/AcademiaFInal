@@ -11,6 +11,7 @@ namespace CapaNegocio
         {
             Listado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
            // Listado.BackgroundColor = Color.FromArgb(29, 29, 29);
+
             Listado.EnableHeadersVisualStyles = false;
             Listado.BorderStyle = BorderStyle.None;
             Listado.CellBorderStyle = DataGridViewCellBorderStyle.None;
