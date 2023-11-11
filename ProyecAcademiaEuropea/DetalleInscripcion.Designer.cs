@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.dgvdetalle = new System.Windows.Forms.DataGridView();
-            this.lblestudiante = new System.Windows.Forms.Label();
             this.space1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Pagar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.lblestudiante = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.semestre1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.semestre1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdetalle)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.semestre1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.semestre1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvdetalle
@@ -62,7 +62,7 @@
             this.dgvdetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.space1,
             this.Pagar});
-            this.dgvdetalle.Location = new System.Drawing.Point(16, 71);
+            this.dgvdetalle.Location = new System.Drawing.Point(13, 71);
             this.dgvdetalle.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.dgvdetalle.Name = "dgvdetalle";
             this.dgvdetalle.ReadOnly = true;
@@ -71,18 +71,9 @@
             this.dgvdetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvdetalle.ShowCellToolTips = false;
             this.dgvdetalle.ShowEditingIcon = false;
-            this.dgvdetalle.Size = new System.Drawing.Size(896, 397);
+            this.dgvdetalle.Size = new System.Drawing.Size(808, 397);
             this.dgvdetalle.TabIndex = 62;
             this.dgvdetalle.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdetalle_CellClick);
-            // 
-            // lblestudiante
-            // 
-            this.lblestudiante.AutoSize = true;
-            this.lblestudiante.Location = new System.Drawing.Point(51, 10);
-            this.lblestudiante.Name = "lblestudiante";
-            this.lblestudiante.Size = new System.Drawing.Size(44, 16);
-            this.lblestudiante.TabIndex = 63;
-            this.lblestudiante.Text = "label1";
             // 
             // space1
             // 
@@ -91,16 +82,6 @@
             this.space1.Name = "space1";
             this.space1.ReadOnly = true;
             this.space1.Width = 200;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::ProyecAcademiaEuropea.Properties.Resources.dolar;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 10;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 200;
             // 
             // Pagar
             // 
@@ -111,6 +92,25 @@
             this.Pagar.Name = "Pagar";
             this.Pagar.ReadOnly = true;
             this.Pagar.Width = 200;
+            // 
+            // lblestudiante
+            // 
+            this.lblestudiante.AutoSize = true;
+            this.lblestudiante.Location = new System.Drawing.Point(51, 10);
+            this.lblestudiante.Name = "lblestudiante";
+            this.lblestudiante.Size = new System.Drawing.Size(44, 16);
+            this.lblestudiante.TabIndex = 63;
+            this.lblestudiante.Text = "label1";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::ProyecAcademiaEuropea.Properties.Resources.dolar;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 10;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Width = 200;
             // 
             // tabControl1
             // 
@@ -129,7 +129,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(929, 483);
+            this.tabPage1.Size = new System.Drawing.Size(837, 483);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -145,43 +145,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(219, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(98, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 2;
-            // 
-            // semestre1
-            // 
-            this.semestre1.Controls.Add(this.button1);
-            this.semestre1.Controls.Add(this.textBox1);
-            this.semestre1.Controls.Add(this.label1);
-            this.semestre1.Location = new System.Drawing.Point(15, 30);
-            this.semestre1.Name = "semestre1";
-            this.semestre1.Size = new System.Drawing.Size(350, 283);
-            this.semestre1.TabIndex = 3;
-            this.semestre1.TabStop = false;
-            this.semestre1.Text = "Primer Semestre";
             // 
             // groupBox2
             // 
@@ -220,6 +183,43 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "label2";
             // 
+            // semestre1
+            // 
+            this.semestre1.Controls.Add(this.button1);
+            this.semestre1.Controls.Add(this.textBox1);
+            this.semestre1.Controls.Add(this.label1);
+            this.semestre1.Location = new System.Drawing.Point(15, 30);
+            this.semestre1.Name = "semestre1";
+            this.semestre1.Size = new System.Drawing.Size(350, 283);
+            this.semestre1.TabIndex = 3;
+            this.semestre1.TabStop = false;
+            this.semestre1.Text = "Primer Semestre";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(219, 230);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(98, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
             // DetalleInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -235,10 +235,10 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.semestre1.ResumeLayout(false);
-            this.semestre1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.semestre1.ResumeLayout(false);
+            this.semestre1.PerformLayout();
             this.ResumeLayout(false);
 
         }
