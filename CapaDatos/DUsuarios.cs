@@ -38,22 +38,31 @@ namespace CapaDatos
             }
             finally { Conect.cerrar(); }
         }
-        public string Login(string User)
+        public DataTable Login(string User)
         {
-            string ContraseñaHash = "";
-            Conect.Abrir();
-            SqlCommand SearchUser = new SqlCommand("BuscarUsuario", CD_Conexion.conectar)
+            try
             {
-                CommandType = CommandType.StoredProcedure
-            };
-            SearchUser.Parameters.AddWithValue("@Buscador", User);
-            SqlDataReader LeerDatos = SearchUser.ExecuteReader();
-            while (LeerDatos.Read())
-            {
-                ContraseñaHash = (string)LeerDatos["Clave"];
+                DataTable data = new DataTable();
+                Conect.Abrir();
+                SqlCommand SearchUser = new SqlCommand("BuscarUsuario", CD_Conexion.conectar)
+                {
+               CommandType = CommandType.StoredProcedure
+                };
+                SearchUser.Parameters.AddWithValue("@Buscador", User);
+                SqlDataAdapter LeerDatos = new SqlDataAdapter(SearchUser);
+                LeerDatos.Fill(data);
+                return data;
             }
-            Conect.cerrar();
-            return ContraseñaHash;
+            catch (Exception exep)
+            {
+
+                throw exep;
+            }
+            finally
+            {
+                Conect.cerrar() ;
+            }
+          
         }
         public void editarUsuario(int idUS, string us, string clave )
         {

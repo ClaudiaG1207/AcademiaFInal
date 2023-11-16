@@ -20,7 +20,7 @@ namespace ProyecAcademiaEuropea
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrincipal());
+            Application.Run(new Login());
         }
     }
 }

@@ -58,6 +58,7 @@
     <Compile Include="NEstudiantes.cs" />
     <Compile Include="NIdioma.cs" />
     <Compile Include="NInscripcion.cs" />
+    <Compile Include="NNotas.cs" />
     <Compile Include="NPersonal.cs" />
     <Compile Include="NTutor.cs" />
     <Compile Include="NUsuarios.cs" />

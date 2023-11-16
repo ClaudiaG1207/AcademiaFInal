@@ -60,9 +60,7 @@ namespace ProyecAcademiaEuropea
 
         private void btnPago_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Pagos Pag = new Pagos();
-            Pag.Show();
+           
         }
 
         private void BtnMini_Click(object sender, EventArgs e)
@@ -101,9 +99,7 @@ namespace ProyecAcademiaEuropea
 
         private void btnNota_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Nota nota = new Nota();
-            nota.Show();
+           
         }
 
         private void btnTutor_Click(object sender, EventArgs e)
@@ -115,10 +111,7 @@ namespace ProyecAcademiaEuropea
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            Pagos pag = new Pagos ();
-            pag.Show();
-
+            
         }
     }
 }

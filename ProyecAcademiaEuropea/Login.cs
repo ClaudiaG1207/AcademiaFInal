@@ -124,41 +124,30 @@ namespace ProyecAcademiaEuropea
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //Logueo();
-            NUsuarios us = new NUsuarios();
-            if (TxtUsuario.Text != "USUARIO")
+            NUsuarios uss = new NUsuarios();
+            try
+            {
+                NUsuarios.reulLogin res = uss.LoginUsuario(TxtUsuario.Text, TxtContra.Text);
+                switch (res)
+                {
+                    case NUsuarios.reulLogin.success: 
+                        FP.Show();
+                        this.Hide();
+                        break;
+                    case NUsuarios.reulLogin.usernot:
+                        MessageBox.Show("No se encontro");
+                        break;
+                    case NUsuarios.reulLogin.contrainco:
+                        MessageBox.Show("Contraseña incorrecta");
+                        break;
+                }
+            }
+            catch (Exception)
             {
 
-                if (us.LoginUsuario(TxtUsuario.Text, TxtContra.Text) == true)
-                {
-
-                    FP.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Datos incorrectos");
-                    TxtUsuario.Clear();
-                    TxtContra.Clear();
-
-                    if (TxtContra.Text == "")
-                    {
-                        TxtContra.Text = "CONTRASEÑA";
-                        TxtContra.ForeColor = Color.White;
-                        TxtContra.UseSystemPasswordChar = false;
-                    }
-                    if (TxtUsuario.Text == "")
-                    {
-                        TxtUsuario.Text = "USUARIO";
-                        TxtUsuario.ForeColor = Color.White;
-                    }
-
-                }
-
-
+                throw;
             }
-            else smsERROR("CAMPOS VACIOS");
-
+       
         }
         private void Logueo()
         {

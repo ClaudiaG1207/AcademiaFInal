@@ -75,6 +75,7 @@ namespace ProyecAcademiaEuropea
             Estudiante.AgregarEstudiante(FCedula, FNomAp, FDirec, FEdad, FCel, FCorreo, FNacionalidad,idTutor);
             MostrarEstudiante();
            
+           
         }
         private void EditarEstudiantes()
 
@@ -88,6 +89,7 @@ namespace ProyecAcademiaEuropea
             FNacionalidad = CBNacionalidad.Text;
             Estudiante.editarestudiante(idestudiante, FCedula, FNomAp, FDirec, FEdad, FCel, FCorreo, FNacionalidad,idTutor);
             MostrarEstudiante();
+           
            
         }
         private void LimpiarCampos()
@@ -138,7 +140,9 @@ namespace ProyecAcademiaEuropea
         }
         private void ValidarCampos()
         {
-            var vr = !string.IsNullOrEmpty(TxtNomEstu.Text) && !string.IsNullOrEmpty(TxtDirecEstu.Text) && !string.IsNullOrEmpty(TxtCorreoEstu.Text) && !string.IsNullOrEmpty(TxtCedEstu.Text) && !string.IsNullOrEmpty(TxtEdadEStu.Text) && !string.IsNullOrEmpty(TxtCelEstu.Text) && !string.IsNullOrEmpty(CBNacionalidad.Text);
+            var vr = !string.IsNullOrEmpty(TxtNomEstu.Text) && !string.IsNullOrEmpty(TxtDirecEstu.Text)
+                && !string.IsNullOrEmpty(TxtCorreoEstu.Text) && !string.IsNullOrEmpty(TxtCedEstu.Text) &&
+                !string.IsNullOrEmpty(TxtEdadEStu.Text) && !string.IsNullOrEmpty(TxtCelEstu.Text) && !string.IsNullOrEmpty(CBNacionalidad.Text);
             BtnGuardar.Enabled = vr;
             btnActualizar.Enabled = vr;
         }
@@ -225,7 +229,8 @@ namespace ProyecAcademiaEuropea
             try
             {
                 EditarEstudiantes();
-          
+                LimpiarCampos();
+
             }
             catch (Exception ex)
             {
@@ -349,13 +354,13 @@ namespace ProyecAcademiaEuropea
 
         private void btnBuscarTutor_Click(object sender, EventArgs e)
         {
-            SelecionarTutorcs st = new SelecionarTutorcs();
+            TutorEstudiante st = new TutorEstudiante();
 
             if (st.ShowDialog() == DialogResult.OK)
             {
                 // Después de que Form2 se cierre, puedes acceder a la propiedad DatoSeleccionado
                 // para obtener el dato seleccionado y utilizarlo en Form1.
-                 idTutor = st.idTutor;
+                 idTutor = st.IdTutor;
                 NomTutor = st.NombreTutor;
 
                 // Haz algo con el dato en Form1
@@ -371,6 +376,11 @@ namespace ProyecAcademiaEuropea
 
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     } 
 }

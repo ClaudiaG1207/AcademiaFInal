@@ -230,12 +230,9 @@ C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcadem
 C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.Login.resources
 C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.RegistroIdioma.resources
 C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.Nosotros.resources
-C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.Nota.resources
-C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.Pagos.resources
 C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.Properties.Resources.resources
 C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.RegistroEstudiantes.resources
 C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.ResgistroPersonal.resources
-C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.SelecionarTutorcs.resources
 C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.TutorEstudiante.resources
 C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\ProyecAcademiaEuropea.frmUsuarios.resources
 C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\Academi3-main\ProyecAcademiaEuropea\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache

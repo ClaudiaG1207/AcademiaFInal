@@ -12,13 +12,13 @@ namespace CapaDatos
     public  class DIdioma
     {
         CD_Conexion Conect = new CD_Conexion();
-        public void Insertaridioma(string Idioma, double costo)
+        public void Insertaridioma(string Idioma)
         {
             Conect.Abrir();
             SqlCommand AggUser = new SqlCommand("AgregarIdiomas",CD_Conexion.conectar);
             AggUser.CommandType = CommandType.StoredProcedure;
             AggUser.Parameters.AddWithValue("@Idioma", Idioma);    
-            AggUser.Parameters.AddWithValue("@Costo", costo);
+          
             AggUser.ExecuteNonQuery();
             Conect.cerrar();
         }
@@ -39,7 +39,7 @@ namespace CapaDatos
             }
             finally { Conect.cerrar(); }
         }
-        public void editarIdioma(int idIdioma, string NomIdioma, double costo)
+        public void editarIdioma(int idIdioma, string NomIdioma)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdIdioma", idIdioma);
                 cmd.Parameters.AddWithValue("@NomIdioma", NomIdioma);
-                cmd.Parameters.AddWithValue("@Costo", costo);
+                
                 cmd.ExecuteNonQuery();
 
 

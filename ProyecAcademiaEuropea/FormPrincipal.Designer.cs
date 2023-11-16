@@ -30,12 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.MenuVertical = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTutor = new System.Windows.Forms.Button();
             this.txtusuarios = new System.Windows.Forms.Button();
             this.btnAcercadeNo = new System.Windows.Forms.Button();
             this.btnInscripcion = new System.Windows.Forms.Button();
             this.btnMateria = new System.Windows.Forms.Button();
-            this.btnNota = new System.Windows.Forms.Button();
             this.btnDocente = new System.Windows.Forms.Button();
             this.btnEstudiante = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
@@ -43,7 +42,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelpadre = new System.Windows.Forms.Panel();
             this.PBLogo = new System.Windows.Forms.PictureBox();
-            this.btnTutor = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMini)).BeginInit();
@@ -56,12 +54,10 @@
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.MidnightBlue;
             this.MenuVertical.Controls.Add(this.btnTutor);
-            this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.txtusuarios);
             this.MenuVertical.Controls.Add(this.btnAcercadeNo);
             this.MenuVertical.Controls.Add(this.btnInscripcion);
             this.MenuVertical.Controls.Add(this.btnMateria);
-            this.MenuVertical.Controls.Add(this.btnNota);
             this.MenuVertical.Controls.Add(this.btnDocente);
             this.MenuVertical.Controls.Add(this.btnEstudiante);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -72,22 +68,22 @@
             this.MenuVertical.TabIndex = 1;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
-            // button1
+            // btnTutor
             // 
-            this.button1.BackColor = System.Drawing.Color.AliceBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(4, 433);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 47);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Contro de Pagos";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnTutor.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnTutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTutor.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnTutor.Image = ((System.Drawing.Image)(resources.GetObject("btnTutor.Image")));
+            this.btnTutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTutor.Location = new System.Drawing.Point(4, 268);
+            this.btnTutor.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTutor.Name = "btnTutor";
+            this.btnTutor.Size = new System.Drawing.Size(297, 47);
+            this.btnTutor.TabIndex = 20;
+            this.btnTutor.Text = "Registro de Tutor";
+            this.btnTutor.UseVisualStyleBackColor = false;
+            this.btnTutor.Click += new System.EventHandler(this.btnTutor_Click);
             // 
             // txtusuarios
             // 
@@ -114,7 +110,7 @@
             this.btnAcercadeNo.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnAcercadeNo.Image = ((System.Drawing.Image)(resources.GetObject("btnAcercadeNo.Image")));
             this.btnAcercadeNo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAcercadeNo.Location = new System.Drawing.Point(4, 488);
+            this.btnAcercadeNo.Location = new System.Drawing.Point(4, 378);
             this.btnAcercadeNo.Margin = new System.Windows.Forms.Padding(4);
             this.btnAcercadeNo.Name = "btnAcercadeNo";
             this.btnAcercadeNo.Size = new System.Drawing.Size(297, 47);
@@ -156,23 +152,6 @@
             this.btnMateria.Text = "Registro de Curso";
             this.btnMateria.UseVisualStyleBackColor = false;
             this.btnMateria.Click += new System.EventHandler(this.btnMateria_Click);
-            // 
-            // btnNota
-            // 
-            this.btnNota.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnNota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNota.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNota.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnNota.Image = ((System.Drawing.Image)(resources.GetObject("btnNota.Image")));
-            this.btnNota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNota.Location = new System.Drawing.Point(4, 378);
-            this.btnNota.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNota.Name = "btnNota";
-            this.btnNota.Size = new System.Drawing.Size(297, 47);
-            this.btnNota.TabIndex = 5;
-            this.btnNota.Text = "Contro de Notas";
-            this.btnNota.UseVisualStyleBackColor = false;
-            this.btnNota.Click += new System.EventHandler(this.btnNota_Click);
             // 
             // btnDocente
             // 
@@ -263,23 +242,6 @@
             this.PBLogo.TabStop = false;
             this.PBLogo.Click += new System.EventHandler(this.PBLogo_Click);
             // 
-            // btnTutor
-            // 
-            this.btnTutor.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnTutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTutor.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnTutor.Image = ((System.Drawing.Image)(resources.GetObject("btnTutor.Image")));
-            this.btnTutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTutor.Location = new System.Drawing.Point(4, 268);
-            this.btnTutor.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTutor.Name = "btnTutor";
-            this.btnTutor.Size = new System.Drawing.Size(297, 47);
-            this.btnTutor.TabIndex = 20;
-            this.btnTutor.Text = "Registro de Tutor";
-            this.btnTutor.UseVisualStyleBackColor = false;
-            this.btnTutor.Click += new System.EventHandler(this.btnTutor_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -313,13 +275,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnInscripcion;
         private System.Windows.Forms.Button btnMateria;
-        private System.Windows.Forms.Button btnNota;
         private System.Windows.Forms.Button btnDocente;
         private System.Windows.Forms.Button btnAcercadeNo;
         private System.Windows.Forms.Panel panelpadre;
         private System.Windows.Forms.PictureBox PBLogo;
         private System.Windows.Forms.Button txtusuarios;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnTutor;
     }
 }

@@ -20,6 +20,7 @@ namespace ProyecAcademiaEuropea
         public int IdDetalle;
         public double nota1;
         public double nota2;
+        public double notafinal;
         public DetalleInscripcion()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace ProyecAcademiaEuropea
             int idestudiante = Idestudiante;
             int idinscripcion = Idinscripcion;
             NInscripcion funcion = new NInscripcion();
+     
             lblestudiante.Text = nombreestudiante;
             funcion.MostrarInscripcionDetalle(dt, idestudiante, idinscripcion);
             Bases.DiseñoDtv(ref dgvdetalle);
@@ -46,58 +48,88 @@ namespace ProyecAcademiaEuropea
 
         }
 
+     
         private void PasarDatos()
         {
+
             try
             {
-                IdDetalle = Convert.ToInt32(dgvdetalle.SelectedCells[2].Value);
-                //nota1 = Convert.ToDouble(dgvdetalle.SelectedCells[8].Value.ToString());
-                //nota2 = Convert.ToDouble(dgvdetalle.SelectedCells[9].Value.ToString());
+                if (dgvdetalle.SelectedCells.Count > 9) // Verificar si hay al menos 10 celdas seleccionadas
+                {
+                    IdDetalle = Convert.ToInt32(dgvdetalle.SelectedCells[2].Value);
 
-                if (dgvdetalle.SelectedCells[8].Value== null)
-                {
-                    nota1 = 10;
+                    // Verificar si las celdas no están vacías o son nulas antes de convertirlas
+                    if (!string.IsNullOrEmpty(dgvdetalle.SelectedCells[8].Value?.ToString()))
+                    {
+                        nota1 = Convert.ToDouble(dgvdetalle.SelectedCells[8].Value.ToString());
+                        txtnota1.Text = nota1.ToString();
+                    }
+                    else
+                    {
+                        txtnota1.Text = " ";
+                    }
+
+                    if (!string.IsNullOrEmpty(dgvdetalle.SelectedCells[9].Value?.ToString()))
+                    {
+                        nota2 = Convert.ToDouble(dgvdetalle.SelectedCells[9].Value.ToString());
+                        txtnota2.Text = nota2.ToString();
+                    }
+                    else
+                    {
+                        txtnota2.Text = " ";
+                    }
+
+                    if (!string.IsNullOrEmpty(dgvdetalle.SelectedCells[10].Value?.ToString()))
+                    {
+                        notafinal = Convert.ToDouble(dgvdetalle.SelectedCells[10].Value.ToString());
+                    }
+                    else
+                    {
+                        notafinal = 0; // Asignar un valor predeterminado o dejarlo como cero si no hay datos
+                    }
+
+                    txtid.Text = IdDetalle.ToString();
+                    tabControl1.SelectedIndex = 1;
                 }
-                if (dgvdetalle.SelectedCells[9].Value == null)
+                else
                 {
-                    nota2 = 0;
-                }
-                txtnota1.Text = nota1.ToString();
-                txtnota2.Text = nota2.ToString();
-                txtid.Text = IdDetalle.ToString();
-                tabControl1.SelectedIndex = 1;
-                if (nota1 != 0)
-                {
-                    semestre1.Enabled = false;
-                }
-                if (nota1 == 0)
-                {
-                    semestre1.Enabled = true;
-                    semestre2.Enabled = false;
-                }
-                if (nota2 != 0)
-                {
-                    semestre2.Enabled = false;
-                }
-                if (nota2 == 0)
-                {
-                    semestre1.Enabled = true;
-                    semestre2.Enabled = false;
+                    MessageBox.Show("Selecciona una fila válida.");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+              }
 
-        }
 
-        private void dgvdetalle_CellClick(object sender, DataGridViewCellEventArgs e)
+
+            private void dgvdetalle_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dgvdetalle.Columns[1].Index)
             {
                 PasarDatos();
             }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Inscripcion ins = new Inscripcion();
+            ins.Show();
+        }
+
+        private void btnGuardarNota1_Click(object sender, EventArgs e)
+        {
+            PasarDatos();
+            NNotas pasarno = new NNotas();
+            pasarno.AgregarNotas(nota1,nota2,notafinal, IdDetalle);
+        }
+
+
+        private void dgvdetalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

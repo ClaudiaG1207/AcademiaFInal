@@ -31,20 +31,40 @@ namespace CapaNegocio
         {
             Usuariop.MostarUsuarios(ref dt);
         }      
-        public bool LoginUsuario(string NombreUsuario, string ContrasenaUser)
+
+        public enum reulLogin
         {
-            string PassHasheada = Usuariop.Login(NombreUsuario);
-            bool Verificar;
+            success,
+            usernot,
+            contrainco
+        }
+        public reulLogin LoginUsuario(string NombreUsuario, string ContrasenaUser)
+        {
+            try
+            {
+                DataTable datos =Usuariop.Login(NombreUsuario);
+                if (datos!=null && datos.Rows.Count>0)
+                {
+                    if (hashPassword.VerifyPassword(ContrasenaUser, datos.Rows[0]["Clave"].ToString())==true)
+                    {
+                        return reulLogin.success;
+                    }
+                    else
+                    {
+                        return reulLogin.contrainco;
+                    }
+                }
+                else
+                {
+                    return reulLogin.usernot;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
             
-            if (hashPassword.VerifyPassword(ContrasenaUser, PassHasheada) == true)
-            {
-                Verificar = true;
-            }
-            else
-            {
-                Verificar = false;
-            }
-            return Verificar;
         }
         private string GenerarNuevaContraseña()
         {

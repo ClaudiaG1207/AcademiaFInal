@@ -72,6 +72,7 @@
             this.CbCargoPer.Name = "CbCargoPer";
             this.CbCargoPer.Size = new System.Drawing.Size(178, 24);
             this.CbCargoPer.TabIndex = 40;
+            this.CbCargoPer.SelectedIndexChanged += new System.EventHandler(this.CbCargoPer_SelectedIndexChanged);
             // 
             // ComNacionalidadPer
             // 
@@ -87,6 +88,7 @@
             this.ComNacionalidadPer.Name = "ComNacionalidadPer";
             this.ComNacionalidadPer.Size = new System.Drawing.Size(178, 24);
             this.ComNacionalidadPer.TabIndex = 39;
+            this.ComNacionalidadPer.SelectedIndexChanged += new System.EventHandler(this.ComNacionalidadPer_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -113,9 +115,12 @@
             // TxtTelefPer
             // 
             this.TxtTelefPer.Location = new System.Drawing.Point(740, 118);
+            this.TxtTelefPer.MaxLength = 8;
             this.TxtTelefPer.Name = "TxtTelefPer";
             this.TxtTelefPer.Size = new System.Drawing.Size(115, 22);
             this.TxtTelefPer.TabIndex = 36;
+            this.TxtTelefPer.TextChanged += new System.EventHandler(this.TxtTelefPer_TextChanged);
+            this.TxtTelefPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefPer_KeyPress);
             // 
             // label6
             // 
@@ -134,6 +139,7 @@
             this.TxtDirecPer.Name = "TxtDirecPer";
             this.TxtDirecPer.Size = new System.Drawing.Size(292, 22);
             this.TxtDirecPer.TabIndex = 34;
+            this.TxtDirecPer.TextChanged += new System.EventHandler(this.TxtDirecPer_TextChanged);
             // 
             // label5
             // 
@@ -163,6 +169,7 @@
             this.TxtCorreoPer.Name = "TxtCorreoPer";
             this.TxtCorreoPer.Size = new System.Drawing.Size(292, 22);
             this.TxtCorreoPer.TabIndex = 31;
+            this.TxtCorreoPer.TextChanged += new System.EventHandler(this.TxtCorreoPer_TextChanged);
             // 
             // label3
             // 
@@ -181,6 +188,8 @@
             this.TxtEdadPer.Name = "TxtEdadPer";
             this.TxtEdadPer.Size = new System.Drawing.Size(63, 22);
             this.TxtEdadPer.TabIndex = 29;
+            this.TxtEdadPer.TextChanged += new System.EventHandler(this.TxtEdadPer_TextChanged);
+            this.TxtEdadPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEdadPer_KeyPress);
             // 
             // label2
             // 
@@ -199,6 +208,7 @@
             this.TxtCedulaPer.Name = "TxtCedulaPer";
             this.TxtCedulaPer.Size = new System.Drawing.Size(166, 22);
             this.TxtCedulaPer.TabIndex = 27;
+            this.TxtCedulaPer.TextChanged += new System.EventHandler(this.TxtCedulaPer_TextChanged);
             // 
             // label1
             // 
@@ -213,10 +223,12 @@
             // 
             // txtNomPer
             // 
-            this.txtNomPer.Location = new System.Drawing.Point(265, 36);
+            this.txtNomPer.Location = new System.Drawing.Point(265, 37);
             this.txtNomPer.Name = "txtNomPer";
             this.txtNomPer.Size = new System.Drawing.Size(248, 22);
             this.txtNomPer.TabIndex = 25;
+            this.txtNomPer.TextChanged += new System.EventHandler(this.txtNomPer_TextChanged);
+            this.txtNomPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomPer_KeyPress);
             // 
             // LbEstuantesR
             // 
@@ -310,7 +322,7 @@
             this.BtnGuardar.BackColor = System.Drawing.Color.Gold;
             this.BtnGuardar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.Navy;
-            this.BtnGuardar.Location = new System.Drawing.Point(875, 272);
+            this.BtnGuardar.Location = new System.Drawing.Point(875, 223);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(131, 37);
             this.BtnGuardar.TabIndex = 67;
@@ -324,7 +336,6 @@
             this.groupBox1.Controls.Add(this.TxtContra);
             this.groupBox1.Controls.Add(this.TxtUsuario);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.BtnEditar);
             this.groupBox1.Controls.Add(this.BtnGuardar);
             this.groupBox1.Controls.Add(this.CbCargoPer);
             this.groupBox1.Controls.Add(this.ComNacionalidadPer);
@@ -342,6 +353,7 @@
             this.groupBox1.Controls.Add(this.TxtCedulaPer);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtNomPer);
+            this.groupBox1.Controls.Add(this.BtnEditar);
             this.groupBox1.Location = new System.Drawing.Point(31, 173);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1162, 339);
@@ -366,6 +378,7 @@
             this.TxtContra.Name = "TxtContra";
             this.TxtContra.Size = new System.Drawing.Size(188, 30);
             this.TxtContra.TabIndex = 71;
+            this.TxtContra.TextChanged += new System.EventHandler(this.TxtContra_TextChanged);
             // 
             // TxtUsuario
             // 
@@ -374,6 +387,7 @@
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(188, 28);
             this.TxtUsuario.TabIndex = 70;
+            this.TxtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
             // 
             // label7
             // 

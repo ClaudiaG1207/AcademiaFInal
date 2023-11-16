@@ -17,13 +17,15 @@ namespace ProyecAcademiaEuropea
         public RegistroIdioma()
         {
             InitializeComponent();
+            BtnEditar.Visible = false;
+            BtnGuardar.Visible = true;
         }
         NIdioma Idio = new NIdioma();
-        public string NomIdioma;
-        public double Costo;
+       
+        public string NomIdioma; 
         int idIdioma;
-        public string IDIOMA;
-        public double COSTO;
+        
+        
         
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -52,10 +54,9 @@ namespace ProyecAcademiaEuropea
         private void INSERTAR()
         {
             NomIdioma = TxtNomIdioma.Text;
-            Costo = Convert.ToDouble(TxtCostoIdioma.Text);
-            TxtCostoIdioma.Clear();
+          
             TxtNomIdioma.Clear();
-            Idio.AgregarIdioma( NomIdioma, Costo);
+            Idio.AgregarIdioma(NomIdioma);
             MostrarIdioma();
             MessageBox.Show("Se realizo el regitro con exito");
         }
@@ -76,8 +77,8 @@ namespace ProyecAcademiaEuropea
         {
 
             idIdioma = int.Parse(dtIdioma.SelectedCells[3].Value.ToString());
-            TxtNomIdioma.Text = dtIdioma.SelectedCells[5].Value.ToString();
-            TxtCostoIdioma.Text = dtIdioma.SelectedCells[6].Value.ToString();
+            TxtNomIdioma.Text = dtIdioma.SelectedCells[4].Value.ToString();
+            
         }
         private void dtIdioma_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -105,8 +106,7 @@ namespace ProyecAcademiaEuropea
         }
         private void ValidarCampos()
         {
-            var vr = !string.IsNullOrEmpty(TxtCostoIdioma.Text) &&
-            !string.IsNullOrEmpty(TxtNomIdioma.Text);
+            var vr = !string.IsNullOrEmpty(TxtNomIdioma.Text);
             BtnGuardar.Enabled = vr;
             BtnEditar.Enabled = vr;
         }
@@ -121,13 +121,14 @@ namespace ProyecAcademiaEuropea
         private void EditarIdioma()
 
         {
-            IDIOMA = TxtNomIdioma.Text;
-            COSTO = Convert.ToDouble(TxtCostoIdioma.Text);
-            TxtCostoIdioma.Clear();
+            NomIdioma = TxtNomIdioma.Text;
+            
             TxtNomIdioma.Clear();
-            Idio.EditarIdioma(idIdioma, NomIdioma, Costo);
+            Idio.EditarIdioma(idIdioma, NomIdioma);
             MostrarIdioma();
             MessageBox.Show("Se actualizo el regitro con exito", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            BtnEditar.Visible=false;
+            BtnGuardar.Visible= true;
         }
         private void BtnEditar_Click(object sender, EventArgs e)
         {

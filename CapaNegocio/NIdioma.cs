@@ -12,17 +12,17 @@ namespace CapaNegocio
     public class NIdioma
     {
         DIdioma Idioma = new DIdioma();
-        public void AgregarIdioma(string NombreIdioma, double Costo)
+        public void AgregarIdioma(string NombreIdioma)
         {
-            Idioma.Insertaridioma(NombreIdioma, Costo);
+            Idioma.Insertaridioma(NombreIdioma);
         }
         public void EliminarIdioma(int id)
         {
             Idioma.EliminarIdioma(id);
         }
-        public void EditarIdioma(int id, string idioma, double costo)
+        public void EditarIdioma(int id, string idioma)
         {
-            Idioma.editarIdioma(id, idioma, costo);
+            Idioma.editarIdioma(id, idioma);
         }
         public void MostarIdioma(DataTable dt)
         {

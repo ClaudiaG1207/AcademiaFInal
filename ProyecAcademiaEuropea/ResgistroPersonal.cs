@@ -46,9 +46,34 @@ namespace ProyecAcademiaEuropea
             FormPrincipal FP = new FormPrincipal();
             FP.Show();
         }
+        public static void Letras(KeyPressEventArgs pE)
+        {
 
+            if (Char.IsLetter(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+
+            else if (Char.IsControl(pE.KeyChar))
+            {
+
+                pE.Handled = false;
+            }
+            else if (Char.IsSeparator(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else
+
+            {
+                pE.Handled = true;
+            }
+
+
+        }
         private void ResgistroPersonal_Load(object sender, EventArgs e)
         {
+            BtnGuardar.Enabled = false;
             MostrarCargos();
             MostrarPersonal();
         }
@@ -102,12 +127,13 @@ namespace ProyecAcademiaEuropea
             if (e.ColumnIndex == dtPersonal.Columns["Editar"].Index)
             {
                 CapturarDatos();
-                BtnEditar.Visible = true;
-                BtnGuardar.Visible = false;
+               
                 label7.Visible= false;
                 label10.Visible= false;
                 TxtUsuario.Visible= false;
                 TxtContra.Visible= false;
+                BtnEditar.Visible = true;
+                BtnGuardar.Visible = false;
             }
 
         }
@@ -127,6 +153,12 @@ namespace ProyecAcademiaEuropea
 
         }
 
+        private void ValidarCampos()
+        {
+            var vr = !string.IsNullOrEmpty(txtNomPer.Text) && !string.IsNullOrEmpty(TxtDirecPer.Text) && !string.IsNullOrEmpty(TxtCorreoPer.Text) && !string.IsNullOrEmpty(ComNacionalidadPer.Text) && !string.IsNullOrEmpty(TxtUsuario.Text) && !string.IsNullOrEmpty(TxtContra.Text) && !string.IsNullOrEmpty(TxtCedulaPer.Text) && !string.IsNullOrEmpty(TxtTelefPer.Text) && !string.IsNullOrEmpty(TxtEdadPer.Text) && !string.IsNullOrEmpty(CbCargoPer.Text);
+            BtnGuardar.Enabled = vr;
+            BtnEditar.Enabled = vr;
+        }
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             InsertarPersonal();
@@ -215,6 +247,81 @@ namespace ProyecAcademiaEuropea
             
         }
 
-       
+        private void TxtContra_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        private void txtNomPer_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        private void TxtDirecPer_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        private void TxtCorreoPer_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        private void ComNacionalidadPer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        private void TxtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        private void TxtCedulaPer_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        private void TxtEdadPer_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        
+
+        private void TxtTelefPer_TextChanged(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        private void CbCargoPer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        private void txtNomPer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Letras(e);
+        }
+
+        private void TxtEdadPer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo se permiten números", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TxtTelefPer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo se permiten números", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

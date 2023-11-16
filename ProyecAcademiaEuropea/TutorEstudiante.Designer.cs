@@ -88,7 +88,7 @@
             this.BtnGuardar.BackColor = System.Drawing.Color.Gold;
             this.BtnGuardar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.Navy;
-            this.BtnGuardar.Location = new System.Drawing.Point(1058, 142);
+            this.BtnGuardar.Location = new System.Drawing.Point(1037, 188);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(131, 37);
             this.BtnGuardar.TabIndex = 67;
@@ -110,6 +110,7 @@
             this.CBNacionalidad.Name = "CBNacionalidad";
             this.CBNacionalidad.Size = new System.Drawing.Size(134, 24);
             this.CBNacionalidad.TabIndex = 34;
+            this.CBNacionalidad.SelectedIndexChanged += new System.EventHandler(this.CBNacionalidad_SelectedIndexChanged);
             // 
             // TxtCelTutor
             // 
@@ -118,6 +119,8 @@
             this.TxtCelTutor.Name = "TxtCelTutor";
             this.TxtCelTutor.Size = new System.Drawing.Size(83, 22);
             this.TxtCelTutor.TabIndex = 33;
+            this.TxtCelTutor.TextChanged += new System.EventHandler(this.TxtCelTutor_TextChanged);
+            this.TxtCelTutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCelTutor_KeyPress);
             // 
             // TxtCorreoTutor
             // 
@@ -125,6 +128,7 @@
             this.TxtCorreoTutor.Name = "TxtCorreoTutor";
             this.TxtCorreoTutor.Size = new System.Drawing.Size(374, 22);
             this.TxtCorreoTutor.TabIndex = 32;
+            this.TxtCorreoTutor.TextChanged += new System.EventHandler(this.TxtCorreoTutor_TextChanged);
             // 
             // TxtDirecTutor
             // 
@@ -132,6 +136,7 @@
             this.TxtDirecTutor.Name = "TxtDirecTutor";
             this.TxtDirecTutor.Size = new System.Drawing.Size(304, 22);
             this.TxtDirecTutor.TabIndex = 31;
+            this.TxtDirecTutor.TextChanged += new System.EventHandler(this.TxtDirecTutor_TextChanged);
             // 
             // TxtEdadTutor
             // 
@@ -139,6 +144,8 @@
             this.TxtEdadTutor.Name = "TxtEdadTutor";
             this.TxtEdadTutor.Size = new System.Drawing.Size(62, 22);
             this.TxtEdadTutor.TabIndex = 30;
+            this.TxtEdadTutor.TextChanged += new System.EventHandler(this.TxtEdadTutor_TextChanged);
+            this.TxtEdadTutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEdadTutor_KeyPress);
             // 
             // TxtNomTutor
             // 
@@ -146,6 +153,8 @@
             this.TxtNomTutor.Name = "TxtNomTutor";
             this.TxtNomTutor.Size = new System.Drawing.Size(283, 22);
             this.TxtNomTutor.TabIndex = 29;
+            this.TxtNomTutor.TextChanged += new System.EventHandler(this.TxtNomTutor_TextChanged);
+            this.TxtNomTutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNomTutor_KeyPress);
             // 
             // TxtCedTutor
             // 
@@ -153,6 +162,7 @@
             this.TxtCedTutor.Name = "TxtCedTutor";
             this.TxtCedTutor.Size = new System.Drawing.Size(177, 22);
             this.TxtCedTutor.TabIndex = 28;
+            this.TxtCedTutor.TextChanged += new System.EventHandler(this.TxtCedTutor_TextChanged);
             // 
             // label9
             // 
@@ -236,13 +246,14 @@
             this.btnActualizar.BackColor = System.Drawing.Color.Gold;
             this.btnActualizar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.Navy;
-            this.btnActualizar.Location = new System.Drawing.Point(1058, 142);
+            this.btnActualizar.Location = new System.Drawing.Point(1037, 188);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(131, 37);
             this.btnActualizar.TabIndex = 68;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Visible = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // dtTutor
             // 
@@ -267,6 +278,8 @@
             this.dtTutor.ShowEditingIcon = false;
             this.dtTutor.Size = new System.Drawing.Size(1296, 279);
             this.dtTutor.TabIndex = 647;
+            this.dtTutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtTutor_CellClick);
+            this.dtTutor.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtTutor_CellContentDoubleClick);
             // 
             // btnSeleccionar
             // 
@@ -324,7 +337,7 @@
             this.LbEstuantesR.ForeColor = System.Drawing.Color.Gold;
             this.LbEstuantesR.Location = new System.Drawing.Point(560, 77);
             this.LbEstuantesR.Name = "LbEstuantesR";
-            this.LbEstuantesR.Size = new System.Drawing.Size(300, 40);
+            this.LbEstuantesR.Size = new System.Drawing.Size(291, 39);
             this.LbEstuantesR.TabIndex = 650;
             this.LbEstuantesR.Text = "Registro De Tutor:";
             // 
@@ -340,10 +353,11 @@
             this.Controls.Add(this.dtTutor);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TutorEstudiante";
             this.Text = "TutorEstudiante";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.TutorEstudiante_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtTutor)).EndInit();
